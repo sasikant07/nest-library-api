@@ -66,7 +66,7 @@ export class BookService {
     });
   }
 
-  async deleteBook(id: string): Promise<void> {
-    await this.bookModel.findByIdAndDelete(id);
+  async deleteBook(id: string): Promise<Book> {
+    return await this.bookModel.findByIdAndDelete(id);
   }
 }
